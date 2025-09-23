@@ -9,9 +9,12 @@ build-type:      Simple
 common warnings
     ghc-options: -Wall
 
-executable example
+executable gcl
     import:           warnings
     main-is:          Main.hs
-    build-depends:    base, parsec
+    build-depends:    base,
+                      megaparsec ^>=9.7.0,
+                      text,
+                      parser-combinators
     hs-source-dirs:   src
     default-language: Haskell2010
